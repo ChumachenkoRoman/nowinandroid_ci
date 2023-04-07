@@ -30,11 +30,13 @@ jobs:
           distribution: 'zulu'
           java-version: 11
 
-      - name: Setup Gradle
+      - name: Gradle setup & release bundle build
         uses: gradle/gradle-build-action@v2
+        with:
+          arguments: bundleRelease
 
-      - name: Build all build type and flavor permutations
-        run: ./gradlew assemble
+#      - name: Build all build type and flavor permutations
+#        run: ./gradlew assemble
 
       - name: Upload build outputs (APKs)
         uses: actions/upload-artifact@v3
