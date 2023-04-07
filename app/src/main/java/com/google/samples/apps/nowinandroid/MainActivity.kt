@@ -17,6 +17,7 @@
 package com.google.samples.apps.nowinandroid
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
@@ -70,6 +71,9 @@ class MainActivity : ComponentActivity() {
     val viewModel: MainActivityViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        Log.d("enigma", "sample log")
+
         val splashScreen = installSplashScreen()
         super.onCreate(savedInstanceState)
 
