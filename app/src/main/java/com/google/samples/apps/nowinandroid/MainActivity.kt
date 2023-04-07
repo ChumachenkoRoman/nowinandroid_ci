@@ -71,9 +71,6 @@ class MainActivity : ComponentActivity() {
     val viewModel: MainActivityViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
-        Log.d("enigma", "sample log")
-
         val splashScreen = installSplashScreen()
         super.onCreate(savedInstanceState)
 
